@@ -229,6 +229,8 @@ void SystemTask::OnTouchEvent() {
   if(!isSleeping) {
     PushMessage(Messages::OnTouchEvent);
     displayApp->PushMessage(Pinetime::Applications::DisplayApp::Messages::TouchEvent);
+  }else{
+        PushMessage(Messages::GoToRunning);
   }
 }
 
