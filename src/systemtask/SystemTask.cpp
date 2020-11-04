@@ -115,7 +115,6 @@ void SystemTask::Work() {
 
           spiNorFlash.Wakeup();
           lcd.Wakeup();
-          touchPanel.Wakeup();
 
           displayApp->PushMessage(Applications::DisplayApp::Messages::GoToRunning);
           displayApp->PushMessage(Applications::DisplayApp::Messages::UpdateBatteryLevel);
@@ -168,7 +167,6 @@ void SystemTask::Work() {
             spiNorFlash.Sleep();
           }
           lcd.Sleep();
-          touchPanel.Sleep();
 
           spi.Sleep();
           twiMaster.Sleep();
